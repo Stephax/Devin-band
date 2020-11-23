@@ -15,12 +15,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Stephax/devinband.git"
+        "url": "git+https://github.com/Stephax/devin-band.git"
     },
     "author": "Michal Bartík",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Stephax/devinband/issues"
+        "url": "https://github.com/Stephax/devin-band/issues"
     },
-    "homepage": "https://github.com/Stephax/devinband#readme"
+    "homepage": "https://github.com/Stephax/devin-band#readme"
 }
