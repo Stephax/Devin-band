@@ -1,0 +1,85 @@
+// Font-family
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// Partials
+@import "utils/_variables";
+@import "utils/_typography";
+@import "utils/_animation";
+//Components
+@import "components/_header";
+@import "components/_footer";
+@import "components/_number";
+@import "components/_cards";
+@import "components/_prefooter";
+@import "components/clock";
+body {
+    font-family: 'Kanit', sans-serif;
+    height: 2500px;
+    color: $dark;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.circle-section {
+    background: $grey-500;
+    padding: 120px 0;
+    @media (max-width: 991px) {
+        padding: 20px 0;
+    }
+    @media (max-width: 768px) {
+        background: $light;
+    }
+    .title {
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+        @media (max-width: 991px) {
+            width: 80%
+        }
+        @media (max-width: 768pxs) {
+            width: 100%
+        }
+        h1 {
+            @extend .fz-4;
+            font-weight: 700;
+            padding-bottom: 10px;
+        }
+        p {
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.spider-section {
+    background: $grey;
+    padding: 120px 0;
+    @media (max-width: 991px) {
+        padding: 20px 0;
+    }
+    .title {
+        text-align: center;
+        margin: 0 auto;
+        h1 {
+            @extend .fz-4;
+            font-weight: 700;
+            background: $green;
+            padding: 36px 72px;
+            color: $light;
+            display: inline-block;
+            @media (max-width: 768px) {
+                padding: 16px 36px;
+            }
+        }
+    }
+}
+
+.slick-slide {
+    outline: none!important;
+}
+
+.card {
+    outline: none!important;
+}

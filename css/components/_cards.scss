@@ -1,0 +1,272 @@
+.card-deck {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    @media (max-width: 991px) {
+        display: block;
+        width: 100%;
+        // margin: 0 15px;
+    }
+    @media (max-width: 576px) {
+        margin: 0 15px;
+    }
+    .card {
+        border-radius: $br-0;
+        border: 1px solid $grey-500;
+        max-width: 254px;
+        transition: all 0.25s ease-in-out;
+        @media (max-width: 991px) {
+            max-width: 100%;
+            margin-bottom: 30px;
+            .icon-link {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                transform: scale(1.4);
+            }
+        }
+        &-header {
+            background: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0 20px;
+            border-bottom: none;
+            p {
+                @extend .fz-6;
+                font-weight: 600;
+                margin: 0 0 0 20px;
+            }
+        }
+        &-body {
+            h5 {
+                @extend .fz-9;
+                line-height: 28px;
+                margin-bottom: 25px;
+            }
+            ul {
+                padding-left: 25px;
+                list-style: none;
+                margin-bottom: 25px;
+                li {
+                    @extend .fz-8;
+                    position: relative;
+                    margin: 10px 0;
+                    &:before {
+                        content: "• ";
+                        color: grey;
+                        font-size: 30px;
+                        position: absolute;
+                        left: -25px;
+                        top: -14px;
+                    }
+                }
+            }
+        }
+        &-footer {
+            border-top: none;
+            text-align: center;
+            padding: 0;
+            height: 60px;
+            a {
+                color: $dark;
+                text-decoration: underline;
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                background: $grey-500;
+                transition: all 0.25s ease-in-out;
+                &:hover {
+                    background: $green-300;
+                    color: $light;
+                    svg {
+                        fill: $light;
+                        animation: bounce .5s infinite ease-in-out;
+                        animation-direction: alternate;
+                    }
+                }
+                svg {
+                    margin: 3px 0 0 10px;
+                    transition: all 0.25s ease-in-out;
+                }
+            }
+        }
+    }
+    .green:hover {
+        border: 1px solid $green-300;
+        transition: all 0.25s ease-in-out!important;
+        a {
+            background: $green-300;
+            color: $light;
+            @media (max-width: 991px) {
+                background: $light;
+            }
+        }
+        svg {
+            fill: $light;
+            @media (max-width: 991px) {
+                fill: $green-300;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+    .green-500:hover {
+        border: 1px solid $green-500;
+        transition: all 0.25s ease-in-out!important;
+        a {
+            background: $green-500;
+            color: $light;
+            @media (max-width: 991px) {
+                background: $light;
+            }
+        }
+        svg {
+            fill: $light;
+            @media (max-width: 991px) {
+                fill: $green-500;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+    .grey:hover {
+        border: 1px solid $grey;
+        transition: all 0.25s ease-in-out!important;
+        a {
+            background: $grey;
+            color: $light;
+            @media (max-width: 991px) {
+                background: $light;
+                transition: all .5s ease-in-out;
+            }
+        }
+        svg {
+            fill: $light;
+            @media (max-width: 991px) {
+                fill: $grey;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+}
+
+.vertical-text {
+    @extend .fz-2;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    color: $green;
+    position: absolute;
+    left: -125px;
+    text-transform: uppercase;
+    font-weight: 900;
+    @media (max-width: 1480px) {
+        position: static;
+        writing-mode: horizontal-tb;
+        transform: none;
+        margin: 0 15px;
+    }
+    @media (max-width: 991px) {
+        margin: auto;
+    }
+}
+
+.marketing {
+    margin-top: 120px;
+    @media (max-width: 991px) {
+        margin-top: 30px;
+        h1 {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+.technology {
+    margin: 139px 0 126px 0;
+    @media (max-width: 991px) {
+        margin: 10px 0;
+        h1 {
+            padding-bottom: 35px;
+        }
+    }
+    .card-deck {
+        justify-content: start;
+        position: relative;
+    }
+    .vertical-text {
+        @extend .vertical-text;
+        color: $orange;
+        left: -185px;
+    }
+    .orange:hover {
+        border: 1px solid $orange;
+        a {
+            background: $orange;
+            color: $light;
+            @media (max-width: 991px) {
+                background: $light;
+            }
+        }
+        svg {
+            fill: $light;
+            @media (max-width: 991px) {
+                fill: $orange;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+    .blue:hover {
+        border: 1px solid $blue;
+        a {
+            background: $blue;
+            color: $light;
+            @media (max-width: 991px) {
+                background: $light;
+            }
+        }
+        svg {
+            fill: $light;
+            @media (max-width: 991px) {
+                fill: $blue;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+    .blue-100:hover {
+        border: 1px solid $blue-100;
+        a {
+            background: $blue-100;
+            color: $light;
+            @media (max-width: 991px) {
+                background: $light;
+            }
+        }
+        svg {
+            fill: $light;
+            @media (max-width: 991px) {
+                fill: $blue-100;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+}
+
+.new-text {
+    p {
+        @extend .fz-5;
+        margin: 4px 0;
+        background: $dark;
+        color: $light;
+        width: 87px;
+        height: 38px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin: auto;
+        position: relative;
+        top: -20px;
+        padding-top: 1px;
+    }
+}

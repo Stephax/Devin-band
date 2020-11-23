@@ -1,0 +1,80 @@
+.clock-background {
+    background: $green;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+}
+
+.clock {
+    width: 64px;
+    height: 64px;
+    background-color: $light;
+    border-radius: 50%;
+    border: 4px solid $dark;
+    position: relative;
+    top: 3px;
+    left: 3px;
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $dark;
+        z-index: 11;
+        width: 6px;
+        height: 6px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+    .number {
+        --rotation: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform: rotate(var(--rotation));
+        color: $dark;
+        font-size: 7px;
+        &.number3 {
+            --rotation: 90deg;
+            right: -4px;
+        }
+        &.number6 {
+            --rotation: 180deg;
+            bottom: -4px;
+        }
+        &.number9 {
+            --rotation: 270deg;
+            left: -4px;
+        }
+        &.number12 {
+            --rotation: 0deg;
+            top: -4px;
+        }
+    }
+    .hand {
+        --rotation: 0;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        width: 2px;
+        height: 25%;
+        z-index: 10;
+        border-radius: 2px;
+        background: $green;
+        transform-origin: bottom;
+        transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+        &.second {
+            width: 1px;
+            height: 35%;
+            opacity: .7;
+            background: $green-100;
+        }
+        &.minute {
+            width: 2px;
+            height: 35%;
+        }
+    }
+}

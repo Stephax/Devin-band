@@ -1,0 +1,31 @@
+.our-numbers {
+    background: rgba(49, 179, 136, 0.1);
+    height: 324px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 991px) {
+        height: auto;
+        padding: 40px 0;
+    }
+    .number-row {
+        justify-content: space-between;
+        .number {
+            text-align: center;
+            flex: 1 1 280px;
+            max-width: 280px;
+            @media (max-width: 991px) {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            h2 {
+                @extend .fz-3;
+                color: $green;
+                font-weight: 600;
+            }
+            p {
+                @extend .fz-10;
+                font-weight: 300;
+            }
+        }
+    }
+}

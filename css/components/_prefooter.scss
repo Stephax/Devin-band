@@ -1,0 +1,87 @@
+.pre-footer {
+    padding: 130px 0 93px 0;
+    @media (max-width: 991px) {
+        background: $grey-500;
+        padding: 40px 0;
+    }
+    .join-us {
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+        h2 {
+            @extend .fz-4;
+            font-weight: 900;
+        }
+        p {
+            @extend .fz-10;
+            font-weight: 300;
+            span {
+                color: $green;
+                font-weight: 600;
+            }
+        }
+    }
+    .slick-arrows {
+        position: absolute;
+        right: 35px;
+        top: -50px;
+        .slick-prev {
+            position: relative;
+            right: 30px;
+            transition: transform 0.25s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                transform: translateX(-10px);
+            }
+        }
+        .slick-next {
+            transition: transform 0.25s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                transform: translateX(10px);
+            }
+        }
+    }
+    .card-deck {
+        @media (max-width: 768px) {
+            margin: 0;
+        }
+        .card {
+            margin: 0 20px;
+            @media (max-width: 991px) {
+                margin: 15px 0;
+                background: $light;
+            }
+            .card-title {
+                height: 100px;
+                @media (max-width: 991px) {
+                    height: auto;
+                }
+                h4 {
+                    @extend .fz-9;
+                    text-transform: uppercase;
+                    padding: 40px 20px;
+                    line-height: 28px;
+                    @media (max-width: 991px) {
+                        padding: 30px 30px 10px;
+                    }
+                }
+            }
+            .card-body {
+                padding-bottom: 10px;
+                @media (max-width: 991px) {
+                    padding: 10px 30px 10px;
+                }
+                p {
+                    @extend .fz-9;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    line-height: 22px;
+                }
+            }
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
