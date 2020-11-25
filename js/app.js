@@ -115,3 +115,26 @@ function setRotation(element, rotationRatio) {
 
 // Aos animation init
 AOS.init();
+
+var items = ["<span class='grey'>rocking <b>strategy</b></span>", "custom tools", "automation", "ai & big data", "marktech",
+    "<span class='orange'>cutting edge <b>innovations</span>", "digital transformation", "business consulting", "leaders mentoring", "startup ideas validation", "business transformation", "brand consulting",
+    "<span class='orange'>business and transformation <b>consulting</b></span>", "optimization", "kpis consulting", "learning", "reports", "print",
+    "<span class='green'>optimizing <b>results & effectivity</b></span>", "influencers", "media buying", "digital & social media", "media creativity", "tv commercials",
+    "<span class='green'>new way of <b>media & execution</b></span>", "special solutions", "brand workshops", "strategic creativity", "creative concepts", "big ideas",
+    "<span class='green'>goal oriented <b>creativity</b></span>", "market rollout plan", "brand positioning", "segmentation targeting", "Market analysis", "Research research"
+];
+var length = items.length
+var stred = 500;
+var polomer = 550;
+for (var i = 0; i < length; i++) {
+    var text = items[i]
+    var x = stred + polomer * Math.sin(2 * Math.PI * -((i) / length));
+    var y = stred + polomer * Math.cos(2 * Math.PI * -(i) / length);
+    $("#center").append("<div class='point' style='left:" + x + "px;bottom:" + y + "px' data-aos='fade-up'><p>" + text + "</p></div>");
+}
+
+if ($(window).width() < 1300) {
+    var polomer = 550;
+} else if ($(window).width() > 1300) {
+    var polomer = 480;
+}

@@ -10,7 +10,8 @@
 @import "components/_number";
 @import "components/_cards";
 @import "components/_prefooter";
-@import "components/clock";
+@import "components/_clock";
+@import "components/_circle";
 body {
     font-family: 'Kanit', sans-serif;
     height: 2500px;
@@ -82,4 +83,8 @@ body {
 
 .card {
     outline: none!important;
+}
+
+.custom-padding {
+    padding: 200px 0;
 }

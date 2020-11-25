@@ -768,6 +768,153 @@ footer .clocks .clock-devin p {
   height: 35%;
 }
 
+svg {
+  margin: 0 auto;
+}
+svg #large-circle {
+  stroke-dasharray: 97%;
+  stroke-dashoffset: 100%;
+  stroke-linecap: round;
+  transform-origin: center;
+}
+svg #bg-large-circle {
+  stroke-dashoffset: 50%;
+  stroke-opacity: 0.3;
+}
+svg:hover #large-circle {
+  animation: largeAnimation 1.3s cubic-bezier(0.36, 0, 0.3, -0.25);
+  animation-direction: alternate;
+}
+svg #medium-circle {
+  stroke-dasharray: 200%;
+  stroke-dashoffset: 17%;
+  stroke-linecap: round;
+  transform-origin: center;
+  transform: rotate(240deg);
+}
+svg #bg-medium-circle {
+  stroke-dashoffset: 50%;
+  stroke-opacity: 0.3;
+}
+svg:hover #medium-circle {
+  animation: mediumAnimation 1.2s cubic-bezier(0.36, 0, 0.4, -0.2);
+  animation-direction: alternate;
+}
+svg #small-circle {
+  stroke-dasharray: 85%;
+  stroke-dashoffset: -25%;
+  stroke-linecap: round;
+  transform-origin: center;
+}
+svg #bg-small-circle {
+  stroke-dashoffset: 50%;
+  stroke-opacity: 0.3;
+}
+svg:hover #small-circle {
+  animation: smallAnimation 1.1s cubic-bezier(0.36, 0, 0.35, -0.3);
+  animation-direction: alternate;
+}
+svg .triad {
+  width: 130px;
+  height: 130px;
+  background: white;
+  border-radius: 50%;
+  border: 12px solid #8BC34A;
+  text-align: center;
+  transform: translate(59%, 13%);
+}
+svg .triad img {
+  margin-top: 30px;
+  width: 60%;
+}
+svg .pros {
+  width: 130px;
+  height: 130px;
+  background: white;
+  border-radius: 50%;
+  border: 12px solid #009688;
+  text-align: center;
+  transform: translate(15%, 25%);
+}
+svg .pros img {
+  margin-top: 42px;
+  width: 70%;
+}
+svg .brackets {
+  width: 130px;
+  height: 130px;
+  background: white;
+  border-radius: 50%;
+  border: 12px solid #F7AB37;
+  text-align: center;
+  transform: translate(3%, 11%);
+}
+svg .brackets img {
+  margin-top: 24px;
+  width: 40%;
+}
+
+#center {
+  position: relative;
+  top: 150px;
+  left: -10px;
+}
+#center .point {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+}
+#center .point p {
+  font-weight: 500;
+  font-size: 16px;
+}
+#center .point p span {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 20px;
+}
+#center .point p span b {
+  text-transform: uppercase;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 29px;
+  display: inline-block;
+  padding-top: 6px;
+}
+#center .point p span.grey {
+  color: #5E5E5E;
+}
+#center .point p span.green {
+  color: #8BC34A;
+}
+#center .point p span.orange {
+  color: #F7AB37;
+}
+
+@keyframes largeAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes mediumAnimation {
+  0% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(-120deg);
+  }
+}
+@keyframes smallAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 body {
   font-family: "Kanit", sans-serif;
   height: 2500px;
@@ -849,6 +996,10 @@ body {
 
 .card {
   outline: none !important;
+}
+
+.custom-padding {
+  padding: 200px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
