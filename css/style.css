@@ -768,6 +768,10 @@ footer .clocks .clock-devin p {
   height: 35%;
 }
 
+#circle {
+  text-align: center;
+}
+
 svg {
   margin: 0 auto;
 }
@@ -782,7 +786,7 @@ svg #bg-large-circle {
   stroke-opacity: 0.3;
 }
 svg:hover #large-circle {
-  animation: largeAnimation 1.3s cubic-bezier(0.36, 0, 0.3, -0.25);
+  animation: largeAnimation 1s cubic-bezier(0.36, 0, 0.3, -0.25);
   animation-direction: alternate;
 }
 svg #medium-circle {
@@ -853,6 +857,12 @@ svg .brackets img {
   margin-top: 24px;
   width: 40%;
 }
+@media (min-width: 1300px) {
+  svg {
+    width: 800px;
+    height: 800px;
+  }
+}
 
 #center {
   position: relative;
@@ -891,6 +901,114 @@ svg .brackets img {
   color: #F7AB37;
 }
 
+.custom-padding {
+  padding: 200px 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.flex .col {
+  flex: 1 1 20%;
+  max-width: 20%;
+  flex-wrap: wrap;
+  margin: 10px 40px;
+  text-align: left;
+}
+.flex .col p {
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 380px) {
+  .flex .col p {
+    font-size: 14px;
+  }
+}
+.flex .col p:nth-child(1) {
+  font-size: 24px;
+  line-height: 25px;
+}
+.flex .col p:nth-child(1) span.grey {
+  color: #5E5E5E;
+}
+.flex .col p:nth-child(1) span.green {
+  color: #8BC34A;
+}
+.flex .col p:nth-child(1) span.orange {
+  color: #F7AB37;
+}
+.flex .col p:nth-child(1) b {
+  text-transform: uppercase;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 29px;
+  display: inline-block;
+  padding-top: 6px;
+}
+@media (max-width: 500px) {
+  .flex .col p:nth-child(1) b {
+    font-size: 24px;
+  }
+}
+@media (max-width: 380px) {
+  .flex .col p:nth-child(1) b {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .flex .col p:nth-child(1) {
+    font-size: 20px;
+  }
+}
+@media (max-width: 380px) {
+  .flex .col p:nth-child(1) {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1020px) {
+  .flex .col {
+    max-width: 30%;
+  }
+}
+@media (max-width: 940px) {
+  .flex .col {
+    max-width: 24%;
+  }
+}
+@media (max-width: 860px) {
+  .flex .col {
+    max-width: 32%;
+    margin: 10px 0;
+  }
+}
+@media (max-width: 690px) {
+  .flex .col {
+    max-width: 47%;
+  }
+}
+@media (min-width: 1300px) {
+  .flex {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  #center.text-respo {
+    padding: 15px;
+    position: sticky;
+  }
+  #center.text-respo .point {
+    position: unset;
+  }
+  #center.text-respo .point p {
+    margin-bottom: 0.5rem;
+  }
+
+  .custom-padding {
+    padding: 0 !important;
+  }
+}
 @keyframes largeAnimation {
   0% {
     transform: rotate(0deg);
@@ -996,10 +1114,6 @@ body {
 
 .card {
   outline: none !important;
-}
-
-.custom-padding {
-  padding: 200px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

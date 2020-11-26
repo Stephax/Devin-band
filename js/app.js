@@ -116,25 +116,50 @@ function setRotation(element, rotationRatio) {
 // Aos animation init
 AOS.init();
 
-var items = ["<span class='grey'>rocking <b>strategy</b></span>", "custom tools", "automation", "ai & big data", "marktech",
-    "<span class='orange'>cutting edge <b>innovations</span>", "digital transformation", "business consulting", "leaders mentoring", "startup ideas validation", "business transformation", "brand consulting",
-    "<span class='orange'>business and transformation <b>consulting</b></span>", "optimization", "kpis consulting", "learning", "reports", "print",
-    "<span class='green'>optimizing <b>results & effectivity</b></span>", "influencers", "media buying", "digital & social media", "media creativity", "tv commercials",
-    "<span class='green'>new way of <b>media & execution</b></span>", "special solutions", "brand workshops", "strategic creativity", "creative concepts", "big ideas",
-    "<span class='green'>goal oriented <b>creativity</b></span>", "market rollout plan", "brand positioning", "segmentation targeting", "Market analysis", "Research research"
+var items = ["<span class='grey'>rocking <b>strategy</b></span>", "", "custom tools", "automation", "ai & big data", "marktech",
+    "", "<span class='orange'>cutting edge <b>innovations</span>", "digital transformation", "business consulting", "leaders mentoring", "startup ideas validation", "business transformation", "brand consulting",
+    "", "<span class='orange'>business and transformation <b>consulting</b></span>", "optimization", "kpis consulting", "learning", "reports", "print",
+    "", "<span class='green'>optimizing <b>results & effectivity</b></span>", "", "influencers", "media buying", "digital & social media", "media creativity", "tv commercials",
+    "<span class='green'>new way of <b>media & execution</b></span>", "", "special solutions", "brand workshops", "strategic creativity", "creative concepts", "big ideas",
+    "<span class='green'>goal oriented <b>creativity</b></span>", "", "market rollout plan", "brand positioning", "segmentation targeting", "Market analysis", "Research research", "",
 ];
-var length = items.length
-var stred = 500;
-var polomer = 550;
-for (var i = 0; i < length; i++) {
-    var text = items[i]
-    var x = stred + polomer * Math.sin(2 * Math.PI * -((i) / length));
-    var y = stred + polomer * Math.cos(2 * Math.PI * -(i) / length);
-    $("#center").append("<div class='point' style='left:" + x + "px;bottom:" + y + "px' data-aos='fade-up'><p>" + text + "</p></div>");
-}
 
-if ($(window).width() < 1300) {
+if ($(window).width() > 1300) {
+    var length = items.length
+    var stred = 500;
     var polomer = 550;
-} else if ($(window).width() > 1300) {
-    var polomer = 480;
+    for (var i = 0; i < length; i++) {
+        var text = items[i]
+        var x = stred + polomer * Math.sin(2 * Math.PI * -((i) / length));
+        var y = stred + polomer * Math.cos(2 * Math.PI * -(i) / length);
+        $("#center").append("<div class='point' style='left:" + x + "px;bottom:" + y + "px' data-aos='fade-up'><p>" + text + "</p></div>");
+    }
+} else if ($(window).width() < 1300) {
+    var firstCol = items.slice(0, 6);
+    var secondCol = items.slice(7, 15);
+    var thirdCol = items.slice(15, 22);
+    var fourthCol = items.slice(22, 29);
+    var fifthCol = items.slice(29, 36);
+    var sixthCol = items.slice(36, 43)
+
+    firstCol.forEach(function(item) {
+        $(".texts-1").append("<p>" + item + "</p>");
+    })
+    secondCol.forEach(function(item) {
+        $(".texts-2").append("<p>" + item + "</p>");
+    })
+    thirdCol.forEach(function(item) {
+        $(".texts-3").append("<p>" + item + "</p>");
+    })
+    fourthCol.forEach(function(item) {
+        $(".texts-4").append("<p>" + item + "</p>");
+    })
+    fifthCol.forEach(function(item) {
+        $(".texts-5").append("<p>" + item + "</p>");
+    })
+    sixthCol.forEach(function(item) {
+        $(".texts-6").append("<p>" + item + "</p>");
+    })
+
+    $(".flex").appendTo("#circle")
 }

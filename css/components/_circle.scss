@@ -1,3 +1,7 @@
+#circle {
+    text-align: center;
+}
+
 svg {
     margin: 0 auto;
     & #large-circle {
@@ -11,7 +15,7 @@ svg {
         stroke-opacity: .3;
     }
     &:hover #large-circle {
-        animation: largeAnimation 1.3s cubic-bezier(0.36, 0, 0.3, -0.25);
+        animation: largeAnimation 1s cubic-bezier(0.36, 0, 0.3, -0.25);
         animation-direction: alternate;
     }
     & #medium-circle {
@@ -82,6 +86,10 @@ svg {
             width: 40%;
         }
     }
+    @media (min-width: 1300px) {
+        width: 800px;
+        height: 800px;
+    }
 }
 
 #center {
@@ -120,6 +128,96 @@ svg {
         }
     }
 }
+
+.custom-padding {
+    padding: 200px 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .col {
+        flex: 1 1 20%;
+        max-width: 20%;
+        flex-wrap: wrap;
+        margin: 10px 40px;
+        text-align: left;
+        p {
+            margin-bottom: 0.5rem;
+            @media (max-width: 380px) {
+                font-size: 14px;
+            }
+        }
+        p:nth-child(1) {
+            font-size: 24px;
+            line-height: 25px;
+            span.grey {
+                color: $grey;
+            }
+            span.green {
+                color: $green-200;
+            }
+            span.orange {
+                color: $orange;
+            }
+            b {
+                text-transform: uppercase;
+                font-size: 34px;
+                font-weight: 600;
+                line-height: 29px;
+                display: inline-block;
+                padding-top: 6px;
+                @media (max-width: 500px) {
+                    font-size: 24px;
+                }
+                @media (max-width: 380px) {
+                    font-size: 18px;
+                }
+            }
+            @media (max-width: 500px) {
+                font-size: 20px;
+            }
+            @media (max-width: 380px) {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 1020px) {
+            max-width: 30%;
+        }
+        @media (max-width: 940px) {
+            max-width: 24%;
+        }
+        @media (max-width: 860px) {
+            max-width: 32%;
+            margin: 10px 0;
+        }
+        @media (max-width: 690px) {
+            max-width: 47%;
+        }
+    }
+    @media (min-width: 1300px) {
+        display: none;
+    }
+}
+
+@media (max-width:1300px) {
+    #center.text-respo {
+        padding: 15px;
+        position: sticky;
+        .point {
+            position: unset;
+            p {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+    .custom-padding {
+        padding: 0!important;
+    }
+}
+
+@media (max-width: 1050px) {}
 
 // Animations
 @keyframes largeAnimation {
