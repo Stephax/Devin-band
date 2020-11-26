@@ -86,9 +86,19 @@ svg {
             width: 40%;
         }
     }
-    @media (min-width: 1300px) {
+}
+
+@media (min-width: 1300px) {
+    #circle svg {
         width: 800px;
         height: 800px;
+    }
+}
+
+@media (max-width: 1300px) {
+    #circle svg {
+        width: 80%;
+        height: 80%;
     }
 }
 

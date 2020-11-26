@@ -857,13 +857,19 @@ svg .brackets img {
   margin-top: 24px;
   width: 40%;
 }
+
 @media (min-width: 1300px) {
-  svg {
+  #circle svg {
     width: 800px;
     height: 800px;
   }
 }
-
+@media (max-width: 1300px) {
+  #circle svg {
+    width: 80%;
+    height: 80%;
+  }
+}
 #center {
   position: relative;
   top: 150px;
